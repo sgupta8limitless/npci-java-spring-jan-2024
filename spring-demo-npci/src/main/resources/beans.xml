@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+		<bean id="basicValidation" class="com.thorprac.spring_demo_npci.BasicValidation" />
+		
+		<bean id="advancedValidation" class="com.thorprac.spring_demo_npci.AdvancedValidation" />
+	
+		<bean id="userClient" class="com.thorprac.spring_demo_npci.UserClient" >
+			
+			<!-- <constructor-arg ref="advancedValidation"></constructor-arg> -->
+			
+			<property name="validation" ref="advancedValidation"></property>
+		
+		</bean>
+		
+		
+		<!-- <bean id="userClient2" class="com.thorprac.spring_demo_npci.UserClient" >
+			
+			<constructor-arg ref="basicValidation"></constructor-arg>
+		
+		</bean> -->
+		 
+		
+		
+
+
+</beans>
+
