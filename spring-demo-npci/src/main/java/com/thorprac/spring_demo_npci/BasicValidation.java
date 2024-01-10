@@ -1,5 +1,10 @@
 package com.thorprac.spring_demo_npci;
 
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
+@Component
+@Primary
 public class BasicValidation implements Validation {
 
 	

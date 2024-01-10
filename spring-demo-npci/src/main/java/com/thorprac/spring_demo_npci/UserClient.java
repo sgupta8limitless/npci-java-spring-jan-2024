@@ -2,12 +2,19 @@ package com.thorprac.spring_demo_npci;
 
 import java.util.Scanner;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class UserClient {
 	
 	Scanner scanner = new Scanner(System.in);
 	
-
+	@Autowired
 	Validation validation ;
+	
+	@Autowired
+	GeneralPrinting generalPrinting;
 	
 //	public UserClient(Validation validation)
 //	{
@@ -31,6 +38,7 @@ public class UserClient {
 		if(result!=null)
 		{
 			System.out.println("putting in data base");
+			generalPrinting.printSomething();
 		}
 		else 
 		{
