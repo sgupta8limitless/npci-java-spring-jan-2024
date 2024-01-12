@@ -3,6 +3,7 @@ package com.thorprac.spring_demo_npci;
 import java.util.Scanner;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -10,18 +11,22 @@ public class UserClient {
 	
 	Scanner scanner = new Scanner(System.in);
 	
-	@Autowired
-	Validation validation ;
+//	@Autowired
+//	@Qualifier("advancedValidation")
+	Validation validation  ;
 	
 	@Autowired
 	GeneralPrinting generalPrinting;
 	
-//	public UserClient(Validation validation)
+//	@Autowired
+//	public UserClient(@Qualifier("advancedValidation") Validation validation)
 //	{
 //		this.validation = validation;
 //	}
-//	
-	public void setValidation(Validation validation)
+	
+	
+	@Autowired
+	public void setValidation(@Qualifier("advancedValidation") Validation validation)
 	{
 		this.validation = validation;
 	}

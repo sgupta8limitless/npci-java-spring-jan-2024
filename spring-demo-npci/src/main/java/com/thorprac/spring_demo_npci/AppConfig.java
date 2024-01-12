@@ -8,3 +8,9 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
 
 }
+
+
+//Qualifiers 
+// Bean Scope
+//constructor in
+//setter injection

@@ -21,6 +21,19 @@ public class App
     	
     	userClient.setData();
     	
+    	BasicValidation basicValidation1 
+    	= applicationContext.getBean("basicValidation",BasicValidation.class);
+    	
+    	basicValidation1.setName("thor");
+    	
+    	BasicValidation basicValidation2 
+    	= applicationContext.getBean("basicValidation",BasicValidation.class);
+    	
+     System.out.println(basicValidation2.getName());
+    	
+    	System.out.println(basicValidation1);
+    	System.out.println(basicValidation2);
+    	
     	
     	
     	
